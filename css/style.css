@@ -1,0 +1,106 @@
+/* common setting */
+  body {
+    background-color: #333;
+    color: #555;
+  }
+  a {
+      transition: opacity .3s;
+      text-decoration: none;
+  }
+/* header */
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background:  linear-gradient(to bottom,rgba(0,0,0, 1),rgba(0,0,0, 0));
+  }
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+  }
+  
+  .header-logo {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-right: 20px;
+    letter-spacing: .05em;
+  }
+  
+  .header-logo a {
+    color: #eee;
+  }
+  
+  .gnav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  .gnav-item:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  .gnav-item a {
+    position: relative;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 0;
+    transition: .3s;
+    letter-spacing: .05em;
+    color: #eee;
+  }
+  .gnav-item a:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    content: "";
+    transition: .3s;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #eee;
+  }
+  
+  .gnav-item a:hover:after {
+    width: 100%;
+  }
+/* slider */
+  .vertical-slider {
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  .vertical-slider__slide {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #333;
+  }
+  .vertical-slider__slide:nth-child(1) {
+    background-color: #777;
+  }
+  .vertical-slider__slide:nth-child(2) {
+    background-color: #888;
+  }
+  .vertical-slider__slide:nth-child(3) {
+    background-color: #999;
+  }
+  .vertical-slider__slide:nth-child(4) {
+    background-color: #aaa;
+  }
+  @media (max-width: 599px) {
+    .vertical-slider__slide {
+      font-size: 16vw;
+    }
+  }
