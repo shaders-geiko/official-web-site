@@ -99,6 +99,10 @@
   .vertical-slider__slide:nth-child(4) {
     background-color: #aaa;
   }
+  .swiper-slide{
+    height: 100%;
+    overflow: hidden;
+  }
   @media (max-width: 599px) {
     .vertical-slider__slide {
       font-size: 16vw;

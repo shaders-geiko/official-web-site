@@ -9,6 +9,7 @@ function setHeight() {
     direction: "vertical",
     slidesPerView: 1,
     speed: 600,
+    effect: "fade",
     mousewheel: true,
     pagination: {
       el: ".vertical-slider__pagination",
