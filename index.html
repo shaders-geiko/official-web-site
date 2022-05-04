@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaders</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link href="css/ress.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" media="all" rel="stylesheet" type="text/css"/>
     <link rel="shortcut icon" href="img/shaders-icon.png"/>
@@ -20,8 +21,8 @@
               <ul class="gnav-list">
                 <li class="gnav-item"><a href="#works">News</a></li>
                 <li class="gnav-item"><a href="#skill">AboutUs</a></li>
-                <li class="gnav-item"><a href="#about">ABOUT</a></li>
-                <li class="gnav-item"><a href="#contact">CONTACT</a></li>
+                <li class="gnav-item"><a href="#about">Members</a></li>
+                <li class="gnav-item"><a href="#contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -85,14 +86,22 @@
         </div>
 
         <div class="container">
-          <p class="title">バーチャル大橋キャンパス</p>
+          <p class="sub-title">バーチャル大橋キャンパス</p>
+          <div class="swiper">
+            <!-- 必要に応じたwrapper -->
+            <div class="swiper-wrapper">
+              <!-- スライド -->
+              <div class="swiper-slide"><img src="img/campus0.png" alt=""></div>
+              <div class="swiper-slide"><img src="img/campus1.png" alt=""></div>
+              <div class="swiper-slide"><img src="img/campus2.png" alt=""></div>
+              <div class="swiper-slide"><img src="img/campus3.png" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
           <p>
-            芸工には学祭サークルをはじめとした素晴らしい作品を生み出すさまざまなサークルが
-            あります。それらをより多くの人に知ってもらいたい、もっと活躍して欲しいという思い
-            からShadersは結成されました。私たちはサービス開発やメタバースプラットフォーム
-            「cluster」でのワールド作成などを通して芸工サークルがオンラインで活躍できる場所を
-            提供し、さらに広報活動も行うことでより多くの人に芸工サークル発の作品を広めること
-            を目的として活動しています。
+            今年のバーチャル芸工祭のテーマは、"Evolve" です。今年のバーチャル芸工祭のテーマは、
+            "Evolve" です。今年のバーチャル芸工祭のテーマは、"Evolve" です。今年のバーチャル芸工
+            祭のテーマは、"Evolve" です。
           </p>
         </div>
   
@@ -129,7 +138,15 @@
             を目的として活動しています。</p>
         </div>
         <!-- /intro -->
-      </main>
+
+        <!-- Schedule -->
+        <div class="container">
+          <h2 class="title">Schedule</h2>
+          <div class='schedule'>
+            <img src="img/schedule.png" alt="">
+          </div>
+        </div>
+        <!-- /News -->
       <!-- Members -->
       <div class="container">
         <p class="title">Members</p>
@@ -147,7 +164,7 @@
         </div>
       </div>
       <!-- /CONTACT -->
-      
+    </main>
       <!-- footer -->
       <footer class="footer">
         <p>九州大学芸術工学部公認サークル | Shader</p>
@@ -158,5 +175,12 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        pagination: {
+        el: ".swiper-pagination"
+        },
+      });
+     </script>
 </body>
 </html>
