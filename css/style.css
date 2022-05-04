@@ -153,6 +153,7 @@
 /* news */
 .news{
   width: 100%;
+  overflow: hidden;
 }
 .card{
   background-color: #eee;
