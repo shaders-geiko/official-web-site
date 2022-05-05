@@ -18,7 +18,7 @@ $(function () {
       img_path=data[key]['img-path'];
       text=data[key]['text'];
       console.log(img_path)
-      $('.news-wrapper').append("<div class='swiper-slide news-slide'><div class='card'><img src='img/campus0.png'/><div class='card-body'><h5 class='card-title'>"+title+"</h5><p class='card-text'>"+text+"</p></div></div></div>")
+      $('.news-wrapper').append("<div class='swiper-slide news-slide'><div class='card'><img src='"+img_path+"'/><div class='card-body'><h5 class='card-title'>"+title+"</h5><p class='card-text'>"+text+"</p></div></div></div>")
     }
   })
 
