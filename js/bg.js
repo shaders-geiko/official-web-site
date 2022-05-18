@@ -46,17 +46,17 @@ function init() {
   scene.add(light);
 
   // 初回実行
-  tick();
+  // tick();
 
-  function tick() {
-    requestAnimationFrame(tick);
-    // 箱を回転させる
-    flower.rotation.y += 0.01;
-    // flower.rotation.z += 0.01;
+  // function tick() {
+  //   requestAnimationFrame(tick);
+  //   // 箱を回転させる
+  //   flower.rotation.y += 0.01;
+  //   // flower.rotation.z += 0.01;
 
-    // レンダリング
-    renderer.render(scene, camera);
-  }
+  //   // レンダリング
+  //   renderer.render(scene, camera);
+  // }
 }
 let canvas = document.getElementById("canvas");
 let resize = () => {
