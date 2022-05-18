@@ -60,9 +60,9 @@ function init() {
   // }
 }
 let canvas = document.getElementById("canvas");
-let resize = () => {
-  canvas.width = window.innerWidth;
-  canvas.height =window.innerHeight;
-};
+// let resize = () => {
+//   canvas.width = window.innerWidth;
+//   canvas.height =window.innerHeight;
+// };
 
-setInterval(() => resize(), 0);
+// setInterval(() => resize(), 0);
