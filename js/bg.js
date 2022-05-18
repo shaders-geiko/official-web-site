@@ -1,10 +1,10 @@
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
-  const width = 960;
-  const height = 540;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
   var flower;
-
+  
   // レンダラーを作成
   const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector("#myCanvas")
@@ -58,3 +58,10 @@ function init() {
     renderer.render(scene, camera);
   }
 }
+let canvas = document.getElementById("canvas");
+let resize = () => {
+  canvas.width = window.innerWidth;
+  canvas.height =window.innerHeight;
+};
+
+setInterval(() => resize(), 0);
