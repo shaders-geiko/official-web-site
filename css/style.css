@@ -107,6 +107,12 @@
   .gnav-item a:hover:after {
     width: 100%;
   }
+/* bg */
+.bg{
+  position: sticky;
+  width: 100vw;
+  height: 100vh;
+}
 /* mv */
 .mv {
   display: flex;
