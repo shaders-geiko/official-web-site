@@ -30,7 +30,7 @@ function init() {
    .load( 'gakumu.glb', function ( gltf ) {
      console.log('loading now')
     flower=gltf.scene
-    flower.scale.set(10,10,10)
+    flower.scale.set(1,1,1)
     scene.add(flower);
    }); 
   const material = new THREE.MeshStandardMaterial({
