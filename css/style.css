@@ -108,8 +108,13 @@
     width: 100%;
   }
 /* bg */
+.bg{
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
 #myCanvas{
-  position: sticky !important;
   width: 100vw;
   height: 100vh;
   z-index: -1;
