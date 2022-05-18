@@ -108,8 +108,8 @@
     width: 100%;
   }
 /* bg */
-.bg{
-  position: sticky;
+.myCanvas{
+  position: sticky !important;
   width: 100vw;
   height: 100vh;
   z-index: -1;
