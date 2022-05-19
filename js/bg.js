@@ -24,8 +24,10 @@ function init() {
   );
   camera.position.set(0, 0, +200);
   var loader = new THREE.GLTFLoader();
-  THREE.DRACOLoader.setDecoderPath( '/examples/js/libs/draco' );
-  loader.setDRACOLoader( new THREE.DRACOLoader() );
+  var dracoLoader = new THREE.DRACOLoader();
+  dracoLoader.setDecoderPath( 'js/draco' );
+  dracoLoader.setDecoderConfig({type: 'js'});
+  loader.setDRACOLoader( new dracoLoader);
   
   loader.setPath( 'models/' )
   .load( 'RobotExpressive.glb', function ( gltf ) {
