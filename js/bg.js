@@ -27,7 +27,7 @@ function init() {
   // const dracoLoader = new DRACOLoader();
   // dracoLoader.setDecoderPath( 'js/draco/');
 
-  new THREE.GLTFLoader().set
+  new THREE.GLTFLoader()
    .setPath( 'models/' )
    .load( 'gakumu.glb', function ( gltf ) {
      console.log('loading now')
