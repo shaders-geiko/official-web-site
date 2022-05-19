@@ -23,12 +23,12 @@ function init() {
     10000
   );
   camera.position.set(0, 0, +200);
-  // var loader = new THREE.GLTFLoader();
-  // var dracoLoader = new THREE.DRACOLoader();
-  // dracoLoader.setDecoderPath( 'js/draco/');
-  // loader.setDRACOLoader(dracoLoader);
+  var loader = new THREE.GLTFLoader();
+  var dracoLoader = new THREE.DRACOLoader();
+  dracoLoader.setDecoderPath( 'js/draco/');
+  loader.setDRACOLoader(dracoLoader);
   
-  new THREE.GLTFLoader()
+  loader.GLTFLoader()
    .setPath( 'models/' )
    .load( 'RobotExpressive.glb', function ( gltf ) {
     flower=gltf.scene
