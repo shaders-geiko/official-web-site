@@ -23,13 +23,12 @@ function init() {
     10000
   );
   camera.position.set(0, 0, +200);
-
-  // const dracoLoader = new DRACOLoader();
-  // dracoLoader.setDecoderPath( 'js/draco/');
-
-  new THREE.GLTFLoader()
-   .setPath( 'models/' )
-   .load( 'gakumu.glb', function ( gltf ) {
+  var loader = new THREE.GLTFLoader();
+  THREE.DRACOLoader.setDecoderPath( '/examples/js/libs/draco' );
+  loader.setDRACOLoader( new THREE.DRACOLoader() );
+  
+  loader.setPath( 'models/' )
+  .load( 'RobotExpressive.glb', function ( gltf ) {
     flower=gltf.scene;
     flower.scale.set(10,10,10);
     scene.add(flower);
