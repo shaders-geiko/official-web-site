@@ -30,8 +30,9 @@ function init() {
   
   loader.setPath( 'models/' )
   .load( 'RobotExpressive.glb', function ( gltf ) {
-    var material = new THREE.MeshFaceMaterial();
-    var flower = new THREE.Mesh(gltf.scene, material);
+    // var material = new THREE.MeshFaceMaterial();
+    // var flower = new THREE.Mesh(gltf.scene, material);
+    
     flower.scale.set(10,10,10);
     scene.add(flower);
    }); 
