@@ -14,11 +14,11 @@ $(function () {
     for (let key in data){
       console.log(key)
       title=data[key]['title'];
-      date=data[key]['date'];
+      date=data[key]['date'].split('.')[0].replace('T',' / ');
       img_path=data[key]['img-path'];
       text=data[key]['text'];
       console.log(img_path)
-      $('.news-wrapper').append("<div class='swiper-slide news-slide'><div class='card'><img src='"+img_path+"'/><div class='card-body'><h5 class='card-title'>"+title+"</h5><p class='card-text'>"+text+"</p></div></div></div>")
+      $('.news-wrapper').append("<div class='swiper-slide news-slide'><div class='card'><img src='"+img_path+"'/><div class='card-body'><p class='card-date'>"+date+"</p><h5 class='card-title'>"+title+"</h5><p class='card-text'>"+text+"</p></div></div></div>")
     }
   })
   $(".readmore").on("click", function() {
