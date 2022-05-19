@@ -29,7 +29,7 @@ function init() {
   // loader.setDRACOLoader(dracoLoader);
   
   new THREE.GLTFLoader()
-   .setPath( '/test/models/' )
+   .setPath( 'models/' )
    .load( 'RobotExpressive.glb', function ( gltf ) {
     flower=gltf.scene
     flower.scale.set(10,10,10)
