@@ -36,8 +36,8 @@ function init() {
   const material = new THREE.MeshStandardMaterial({
     color: 0x0000ff
   });
-  // const box = new THREE.Mesh(flower, material);
-  // scene.add(box);
+  const box = new THREE.Mesh(flower, material);
+  scene.add(box);
 
   // 平行光源
   const light = new THREE.DirectionalLight(0xffffff);
