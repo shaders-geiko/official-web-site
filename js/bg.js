@@ -24,7 +24,7 @@ function init() {
   );
   camera.position.set(0, 0, +200);
 
-  const dracoLoader = new THREE.DRACOLoader();
+  const dracoLoader = new DRACOLoader();
   dracoLoader.setDecoderPath( 'js/draco/');
 
   new THREE.GLTFLoader().set
