@@ -25,5 +25,17 @@ $(function () {
     $(this).toggleClass("on-click");
     $(".hide-text").slideToggle(1000);
 });
+  $(window).on('scroll',function(){
+
+    $(".title").each(function(){
+      var position = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > position - windowHeight +140){
+        $(this).addClass('isActive');
+      }
+    });
+    
+  });
 
 })

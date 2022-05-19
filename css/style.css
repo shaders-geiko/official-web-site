@@ -24,19 +24,38 @@
     margin: 0 auto;
     padding: 30px 80px;
   }
+  .title-box{
+    text-align: center;
+    padding-bottom: 20px;
+  }
   .title{
+    position: relative;
+    display: inline-block;
     font-weight: bold;
     text-align: center;
     font-size: 40px;
     padding-top: 20px;
-    padding-bottom: 20px;
+  }
+  .title:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.3rem;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #0f0 25%, #0f0 85%, transparent);;
+    transition: all 0.8s;
+  }
+  .title.isActive:after {
+    width: 130%;
   }
   .sub-title{
     text-align: center;
     font-weight: bold;
     font-size: 30px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 
 
@@ -112,7 +131,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
+  z-index: -2;
 }
 /* mv */
 .mv {
