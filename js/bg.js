@@ -23,16 +23,13 @@ function init() {
     10000
   );
   camera.position.set(0, 0, +200);
-  var loader = new THREE.GLTFLoader();
-  var dracoLoader = new THREE.DRACOLoader();
-  dracoLoader.setDecoderPath( 'js/draco/');
-  loader.setDRACOLoader(dracoLoader);
+  // var loader = new THREE.GLTFLoader();
+  // var dracoLoader = new THREE.DRACOLoader();
+  // dracoLoader.setDecoderPath( 'js/draco/');
+  // loader.setDRACOLoader(dracoLoader);
   
-  loader.setPath( 'models/' )
+  THREE.GLTFLoader.setPath( 'models/' )
   .load( 'RobotExpressive.glb', function ( gltf ) {
-    // var material = new THREE.MeshFaceMaterial();
-    // var flower = new THREE.Mesh(gltf.scene, material);
-    
     flower.scale.set(10,10,10);
     scene.add(flower);
    }); 
