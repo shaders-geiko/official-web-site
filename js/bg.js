@@ -27,15 +27,15 @@ function init() {
   // const dracoLoader = new DRACOLoader();
   // dracoLoader.setDecoderPath( 'js/draco/');
 
-  // new THREE.GLTFLoader().set
-  //  .setPath( 'models/' )
-  //  .setDRACOLoader( dracoLoader )
-  //  .load( 'gakumu.glb', function ( gltf ) {
-  //    console.log('loading now')
-  //   flower=gltf.scene
-  //   flower.scale.set(10,10,10)
-  //   scene.add(flower);
-  //  }); 
+  new THREE.GLTFLoader().set
+   .setPath( 'models/' )
+   .setDRACOLoader( dracoLoader )
+   .load( 'gakumu.glb', function ( gltf ) {
+     console.log('loading now')
+    flower=gltf.scene
+    flower.scale.set(10,10,10)
+    scene.add(flower);
+   }); 
 
   // 平行光源
   const light = new THREE.DirectionalLight(0xffffff);
