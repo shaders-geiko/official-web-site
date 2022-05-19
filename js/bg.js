@@ -1,66 +1,90 @@
-window.addEventListener("DOMContentLoaded", init);
+window.addEventListener('DOMContentLoaded', init);
 function init() {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  var flower;
-  // レンダラーを作成
-  const renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector("#myCanvas")
-  });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(width, height);
+    // レンダラーを作成
+    const renderer = new THREE.WebGLRenderer({
+        canvas: document.querySelector('#myCanvas')
+    });
+    // ウィンドウサイズ設定
+    width = window.innerWidth;
+    height = window.innerHeight;
+    renderer.setPixelRatio(1);
+    renderer.setSize(width, height);
+    console.log(window.devicePixelRatio);
+    console.log(width+", "+height);
+ 
+    // シーンを作成
+    const scene = new THREE.Scene();
+ 
+    // カメラを作成
+    camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
+    camera.position.set(0, 0, 1000);
+    
+    //camera.lookAt(new THREE.Vector3(0, 400, 0));
 
-  // シーンを作成
-  const scene = new THREE.Scene();
-  var axes = new THREE.AxesHelper(25);
-  scene.add(axes);
-  // カメラを作成
-  const camera = new THREE.PerspectiveCamera(
-    45,
-    width / height,
-    1,
-    10000
-  );
-  camera.position.set(0, 0, +200);
-  var loader = new THREE.GLTFLoader();
-  var dracoLoader = new THREE.DRACOLoader();
-  dracoLoader.setDecoderPath('https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js/examples/js/libs/draco/gltf/');
-  loader.setDRACOLoader(dracoLoader);
+    // Load GLTF or GLB
+    var loader = new THREE.GLTFLoader();
+    var dracoLoader = new THREE.DRACOLoader();
+    dracoLoader.setDecoderPath('js/draco/gltf/');
+    loader.setDRACOLoader(dracoLoader);
+    
+    const url = 'gakumu.glb';
+    
+    let model = null;
+    loader.load(
+        url, 
+        function ( gltf ){
+            model = gltf.scene;
+            model.name = "model_with_cloth";
+            model.scale.set(4, 4, 4);
+            model.position.set(1, -300,1);
+            scene.add( gltf.scene );
+
+            model["test"] = 100;
+            console.log("model");
+        },
+        function ( error ) {
+            console.log( 'An error happened' );
+            console.log( error );
+        }
+    );
+    renderer.gammaOutput = true;
+
+    // 平行光源
+    const light = new THREE.DirectionalLight(0xFFFFFF);
+    light.intensity = 2; // 光の強さを倍に
+    light.position.set(1, 1, 1);
+    // シーンに追加
+    scene.add(light);
+
+    // 初回実行
+    tick();
+
+    function tick() {
+      requestAnimationFrame(tick);
+      model.rotation.y += 0.01;
+      // flower.rotation.z += 0.01;
   
-  loader
-   .setPath( 'models/' )
-   .load( 'test.glb', function ( gltf ) {
-     
-    flower=gltf.scene;
-    flower.scale.set(10,10,10);
-    cantScrollTouchDevice();
-    scene.add(flower);
-    THREE.DRACOLoader.releaseDecoderModule();
-   }); 
+      // レンダリング
+      renderer.render(scene, camera);
+    }
+    
 
-  // 平行光源
-  const light = new THREE.DirectionalLight(0xffffff);
-  light.intensity = 2; // 光の強さを倍に
-  light.position.set(1, 1, 1);
-  // シーンに追加
-  scene.add(light);
+    // 初期化のために実行
+    onResize();
+    // リサイズイベント発生時に実行
+    window.addEventListener('resize', onResize);
+    function onResize() {
+        // サイズを取得
+        width = window.innerWidth;
+        height = window.innerHeight;
 
-  // 初回実行
-  tick();
+        // レンダラーのサイズを調整する
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(width, height);
 
-  function tick() {
-    requestAnimationFrame(tick);
-    flower.rotation.y += 0.01;
-    // flower.rotation.z += 0.01;
-
-    // レンダリング
-    renderer.render(scene, camera);
-  }
+        // カメラのアスペクト比を正す
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        console.log(width);
+    }
 }
-// let canvas = document.getElementById("canvas");
-// let resize = () => {
-//   canvas.width = window.innerWidth;
-//   canvas.height =window.innerHeight;
-// };
-
-// setInterval(() => resize(), 0);
