@@ -62,8 +62,6 @@ function init() {
     function tick() {
       requestAnimationFrame(tick);
       model.rotation.y += 0.01;
-      // flower.rotation.z += 0.01;
-  
       // レンダリング
       renderer.render(scene, camera);
     }
