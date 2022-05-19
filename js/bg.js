@@ -33,7 +33,7 @@ function init() {
    .load( 'RobotExpressive.glb', function ( gltf ) {
     flower=gltf.scene
     flower.scale.set(10,10,10)
-    scene.add(flower);
+    scene.add(flower)
    }); 
 
   // 平行光源
