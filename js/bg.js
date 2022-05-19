@@ -27,20 +27,15 @@ function init() {
   const dracoLoader = new DRACOLoader();
   dracoLoader.setDecoderPath( 'js/draco/');
 
-  new THREE.GLTFLoader().set
-   .setPath( 'models/' )
-   .setDRACOLoader( dracoLoader )
-   .load( 'gakumu.glb', function ( gltf ) {
-     console.log('loading now')
-    flower=gltf.scene
-    flower.scale.set(10,10,10)
-    scene.add(flower);
-   }); 
-  const material = new THREE.MeshStandardMaterial({
-    color: 0x0000ff
-  });
-  const box = new THREE.Mesh(flower, material);
-  scene.add(box);
+  // new THREE.GLTFLoader().set
+  //  .setPath( 'models/' )
+  //  .setDRACOLoader( dracoLoader )
+  //  .load( 'gakumu.glb', function ( gltf ) {
+  //    console.log('loading now')
+  //   flower=gltf.scene
+  //   flower.scale.set(10,10,10)
+  //   scene.add(flower);
+  //  }); 
 
   // 平行光源
   const light = new THREE.DirectionalLight(0xffffff);
@@ -61,7 +56,7 @@ function init() {
     renderer.render(scene, camera);
   }
 }
-let canvas = document.getElementById("canvas");
+// let canvas = document.getElementById("canvas");
 // let resize = () => {
 //   canvas.width = window.innerWidth;
 //   canvas.height =window.innerHeight;
