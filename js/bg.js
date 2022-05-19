@@ -27,7 +27,7 @@ function init() {
   var dracoLoader = new THREE.DRACOLoader();
   dracoLoader.setDecoderPath( 'js/draco/' );
   dracoLoader.setDecoderConfig({type: 'js'});
-  loader.setDRACOLoader( new dracoLoader);
+  loader.setDRACOLoader(dracoLoader);
   
   loader.setPath( 'models/' )
   .load( 'RobotExpressive.glb', function ( gltf ) {
