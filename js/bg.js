@@ -25,14 +25,14 @@ function init() {
   );
   camera.position.set(0, 0, +200);
 
-  new THREE.GLTFLoader()
-   .setPath( 'models/' )
-   .load( 'gakumu.glb', function ( gltf ) {
-     console.log('loading now')
-    flower=gltf.scene
-    flower.scale.set(0.01,0.01,0.01)
-    scene.add(flower);
-   }); 
+  // new THREE.GLTFLoader()
+  //  .setPath( 'models/' )
+  //  .load( 'gakumu.glb', function ( gltf ) {
+  //    console.log('loading now')
+  //   flower=gltf.scene
+  //   flower.scale.set(0.01,0.01,0.01)
+  //   scene.add(flower);
+  //  }); 
   const material = new THREE.MeshStandardMaterial({
     color: 0x0000ff
   });
