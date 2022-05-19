@@ -29,7 +29,6 @@ function init() {
 
   new THREE.GLTFLoader().set
    .setPath( 'models/' )
-   .setDRACOLoader( dracoLoader )
    .load( 'gakumu.glb', function ( gltf ) {
      console.log('loading now')
     flower=gltf.scene
