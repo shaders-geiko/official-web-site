@@ -4,7 +4,6 @@ function init() {
   const width = window.innerWidth;
   const height = window.innerHeight;
   var flower;
-  
   // レンダラーを作成
   const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector("#myCanvas")
@@ -23,10 +22,14 @@ function init() {
     1,
     10000
   );
-  camera.position.set(0, -200, +200);
+  camera.position.set(0, 0, +200);
 
-  new THREE.GLTFLoader()
+  const dracoLoader = new THREE.DRACOLoader();
+  dracoLoader.setDecoderPath( 'js/draco/');
+
+  new THREE.GLTFLoader().set
    .setPath( 'models/' )
+   .setDRACOLoader( dracoLoader )
    .load( 'gakumu.glb', function ( gltf ) {
      console.log('loading now')
     flower=gltf.scene
