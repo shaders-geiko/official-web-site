@@ -29,7 +29,7 @@ function init() {
   loader.setDRACOLoader(dracoLoader);
   
   loader.setPath( 'models/' )
-  .load( 'gakumu.glb', function ( gltf ) {
+  .load( 'RobotExpressive.glb', function ( gltf ) {
     var material = new THREE.MeshFaceMaterial();
     var flower = new THREE.Mesh(gltf.scene, material);
     flower.scale.set(10,10,10);
