@@ -1,3 +1,11 @@
+function tick() {
+  requestAnimationFrame(tick);
+  flower.rotation.y += 0.01;
+  // flower.rotation.z += 0.01;
+
+  // レンダリング
+  renderer.render(scene, camera);
+}
 window.addEventListener("DOMContentLoaded", init);
 function init() {
   const width = window.innerWidth;
@@ -47,15 +55,6 @@ function init() {
 
   // 初回実行
   tick();
-
-  function tick() {
-    requestAnimationFrame(tick);
-    flower.rotation.y += 0.01;
-    // flower.rotation.z += 0.01;
-
-    // レンダリング
-    renderer.render(scene, camera);
-  }
 }
 // let canvas = document.getElementById("canvas");
 // let resize = () => {
