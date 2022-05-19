@@ -28,10 +28,11 @@ function init() {
   // dracoLoader.setDecoderPath( 'js/draco/');
   // loader.setDRACOLoader(dracoLoader);
   
-  THREE.GLTFLoader.setPath( 'models/' )
+  new THREE.GLTFLoader.setPath( 'models/' )
   .load( 'RobotExpressive.glb', function ( gltf ) {
-    flower.scale.set(10,10,10);
-    scene.add(flower);
+    var flower=gltf.scene
+    flower.scale.set(10,10,10)
+    scene.add(flower)
    }); 
 
   // 平行光源
