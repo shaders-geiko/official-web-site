@@ -47,9 +47,9 @@ function init() {
   tick();
 
   function tick() {
-    // requestAnimationFrame(tick);
-    // flower.rotation.y += 0.01;
-    // flower.rotation.z += 0.01;
+    requestAnimationFrame(tick);
+    flower.rotation.y += 0.01;
+    flower.rotation.z += 0.01;
 
     // レンダリング
     renderer.render(scene, camera);
