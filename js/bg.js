@@ -27,7 +27,7 @@ function init() {
   dracoLoader.setDecoderPath('https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js/examples/js/libs/draco/gltf/');
   loader.setDRACOLoader(dracoLoader);
   
-  loader.GLTFLoader()
+  loader
    .setPath( 'models/' )
    .load( 'RobotExpressive.glb', function ( gltf ) {
     flower=gltf.scene
