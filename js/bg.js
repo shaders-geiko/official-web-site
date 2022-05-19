@@ -31,7 +31,8 @@ function init() {
   
   loader.setPath( 'models/' )
   .load( 'gakumu.glb', function ( gltf ) {
-    flower=gltf.scene;
+    var material = new THREE.MeshFaceMaterial();
+    var flower = new THREE.Mesh(gltf.scene, material);
     flower.scale.set(10,10,10);
     scene.add(flower);
    }); 
