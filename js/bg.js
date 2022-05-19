@@ -30,14 +30,14 @@ function init() {
    .load( 'gakumu.glb', function ( gltf ) {
      console.log('loading now')
     flower=gltf.scene
-    flower.scale.set(1,1,1)
+    flower.scale.set(0.01,0.01,0.01)
     scene.add(flower);
    }); 
   const material = new THREE.MeshStandardMaterial({
     color: 0x0000ff
   });
-  const box = new THREE.Mesh(flower, material);
-  scene.add(box);
+  // const box = new THREE.Mesh(flower, material);
+  // scene.add(box);
 
   // 平行光源
   const light = new THREE.DirectionalLight(0xffffff);
