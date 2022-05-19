@@ -1,5 +1,4 @@
 window.addEventListener("DOMContentLoaded", init);
-
 function init() {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -25,7 +24,7 @@ function init() {
   camera.position.set(0, 0, +200);
   var loader = new THREE.GLTFLoader();
   var dracoLoader = new THREE.DRACOLoader();
-  dracoLoader.setDecoderPath( 'js/draco/');
+  dracoLoader.setDecoderPath('https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js/examples/js/libs/draco/gltf/');
   loader.setDRACOLoader(dracoLoader);
   
   loader.GLTFLoader()
