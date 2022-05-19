@@ -50,9 +50,8 @@ function init() {
   tick();
 
   function tick() {
-    requestAnimationFrame(tick);
-    // 箱を回転させる
-    flower.rotation.y += 0.01;
+    // requestAnimationFrame(tick);
+    // flower.rotation.y += 0.01;
     // flower.rotation.z += 0.01;
 
     // レンダリング
