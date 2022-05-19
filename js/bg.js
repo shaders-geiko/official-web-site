@@ -27,7 +27,7 @@ function init() {
 
   new THREE.GLTFLoader()
    .setPath( 'models/' )
-   .load( 'RobotExpressive.glb', function ( gltf ) {
+   .load( 'gakumu.glb', function ( gltf ) {
      console.log('loading now')
     flower=gltf.scene
     flower.scale.set(10,10,10)
