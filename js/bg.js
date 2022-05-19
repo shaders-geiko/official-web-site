@@ -23,7 +23,7 @@ function init() {
     1,
     10000
   );
-  camera.position.set(0, 0, +200);
+  camera.position.set(0, -200, +200);
 
   new THREE.GLTFLoader()
    .setPath( 'models/' )
