@@ -29,7 +29,7 @@ function init() {
   
   loader
    .setPath( 'models/' )
-   .load( 'RobotExpressive.glb', function ( gltf ) {
+   .load( 'gakumu.glb', function ( gltf ) {
     flower=gltf.scene
     flower.scale.set(10,10,10)
     scene.add(flower)
