@@ -27,7 +27,7 @@ function init() {
     dracoLoader.setDecoderPath('js/draco/gltf/');
     loader.setDRACOLoader(dracoLoader);
     
-    const url = 'gakumu.glb';
+    const url = 'models/gakumu.glb';
     
     let model = null;
     loader.load(
