@@ -30,7 +30,7 @@ function init() {
   loader.setDRACOLoader(dracoLoader);
   
   loader.setPath( 'models/' )
-  .load( 'RobotExpressive.glb', function ( gltf ) {
+  .load( 'gakumu.glb', function ( gltf ) {
     flower=gltf.scene;
     flower.scale.set(10,10,10);
     scene.add(flower);
@@ -49,7 +49,7 @@ function init() {
   function tick() {
     requestAnimationFrame(tick);
     flower.rotation.y += 0.01;
-    flower.rotation.z += 0.01;
+    // flower.rotation.z += 0.01;
 
     // レンダリング
     renderer.render(scene, camera);
