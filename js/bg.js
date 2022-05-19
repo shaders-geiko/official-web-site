@@ -30,9 +30,12 @@ function init() {
   loader
    .setPath( 'models/' )
    .load( 'gakumu.glb', function ( gltf ) {
-    flower=gltf.scene
-    flower.scale.set(10,10,10)
-    scene.add(flower)
+     
+    flower=gltf.scene;
+    flower.scale.set(10,10,10);
+    cantScrollTouchDevice();
+    scene.add(flower);
+    THREE.DRACOLoader.releaseDecoderModule();
    }); 
 
   // 平行光源
