@@ -28,7 +28,8 @@ function init() {
   // dracoLoader.setDecoderPath( 'js/draco/');
   // loader.setDRACOLoader(dracoLoader);
   
-  new THREE.GLTFLoader.setPath( 'models/' )
+  new THREE.GLTFLoader()
+  .setPath( 'models/' )
   .load( 'RobotExpressive.glb', function ( gltf ) {
     var flower=gltf.scene
     flower.scale.set(10,10,10)
