@@ -128,6 +128,7 @@
   }
 /* bg */
 #myCanvas{
+  filter: blur(5px);
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -231,6 +232,60 @@
   width: 100%;
   border-radius: 5%;
 }
+/* intro vgeiko */
+.model-display{
+  margin-left: 50%;
+  margin-bottom: 30px;
+  transform: translate(-50%,0);
+  width: 30vw;
+  height: 30vw;
+  background-color: #fff;
+  border-radius: 5%;
+}
+/* member-intro */
+.mem-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.mem-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 48%;
+  margin-bottom: 50px;
+}
+
+.mem-img {
+  width: 30px;
+  height: auto;
+  margin-right: 20px;
+}
+.mem-img img{
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+}
+.mem-img:hover{
+  width: 70px;
+  transform: translate(-5px,-5px);
+  transition: 0.5s;
+}
+.mem-body {
+  flex: 1;
+}
+
+.mem-name {
+  margin-bottom: 10px;
+}
+
+.mem-text {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
 /* contact */
 .contact p{
   text-align: center;
@@ -321,3 +376,29 @@ button.readmore:hover::after {
       font-size: 16vw;
     }
   }
+  @media screen and (max-width: 767px) {
+    .mem-list {
+      display: block;
+      margin-bottom: 0;
+    }
+  
+    .mem-item {
+      width: 100%;
+      margin-bottom: 35px;
+      opacity: 0;
+    }
+  
+    .mem-item:last-child {
+      margin-bottom: 0;
+    }
+  
+    .mem-name {
+      margin-bottom: 5px;
+    }
+  
+    .mem-text {
+      font-size: 13px;
+      line-height: 1.7;
+    }
+  }
+  
