@@ -256,16 +256,18 @@
 
 .mem-img {
   display: inline-block;
-  width: 30px;
+  max-width: 30%;
   height: auto;
   margin-right: 20px;
 }
 .mem-img img{
+
   width: 120px;
   height: auto;
   margin-right: 20px;
 }
 .mem-body {
+  max-width: 70%;
   display: inline-block;
   flex: 1;
 }
