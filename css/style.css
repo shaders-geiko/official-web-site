@@ -375,9 +375,6 @@ button.readmore:hover::after {
     body {
       font-size: 14px;
     }
-    .container {
-      padding: 30px 30px;
-    }
     .pc-only {
       display: none;
     }
@@ -388,7 +385,18 @@ button.readmore:hover::after {
     .title {
       font-size: 26px;
       margin-bottom: 20px;
-    }  
+    } 
+    .wrapper {
+      padding-top: 57px;
+    }
+  
+    .section {
+      padding: 60px 0;
+    }
+  
+    .container {
+      padding: 0 20px;
+    }
     .header .container {
       padding: 15px;
     }
