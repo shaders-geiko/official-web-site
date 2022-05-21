@@ -375,7 +375,9 @@ button.readmore:hover::after {
     body {
       font-size: 14px;
     }
-  
+    .container {
+      padding: 30px 30px;
+    }
     .pc-only {
       display: none;
     }
