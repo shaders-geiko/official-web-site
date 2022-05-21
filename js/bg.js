@@ -5,8 +5,8 @@ function init() {
         canvas: document.querySelector('#myCanvas')
     });
     // ウィンドウサイズ設定
-    width = window.innerWidth;
-    height = window.innerHeight;
+    width = document.body.clientWidth;
+    height = document.body.clientHeight;
     renderer.setPixelRatio(1);
     renderer.setSize(width, height);
     console.log(window.devicePixelRatio);
@@ -73,8 +73,8 @@ function init() {
     window.addEventListener('resize', onResize);
     function onResize() {
         // サイズを取得
-        width = window.innerWidth;
-        height = window.innerHeight;
+        width = document.body.clientWidth;
+        height = document.body.clientHeight;
 
         // レンダラーのサイズを調整する
         renderer.setPixelRatio(window.devicePixelRatio);
