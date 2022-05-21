@@ -21,9 +21,10 @@ $(function () {
       $('.news-wrapper').append("<div class='swiper-slide news-slide'><div class='card'><img src='"+img_path+"'/><div class='card-body'><p class='card-date'>"+date+"</p><h5 class='card-title'>"+title+"</h5><p class='card-text'>"+text+"</p></div></div></div>")
     }
   })
+  $(".hide-text").hide();
   $(".readmore").on("click", function() {
     $(this).toggleClass("on-click");
-    $(".hide-text").slideToggle(1000);
+    $(".hide-text").slideToggle(500);
 });
   $(window).on('scroll',function(){
 

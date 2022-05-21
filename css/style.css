@@ -244,6 +244,7 @@
 }
 /* member-intro */
 .mem-list {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -259,6 +260,7 @@
 }
 
 .mem-img {
+  display: inline-block;
   width: 30px;
   height: auto;
   margin-right: 20px;
@@ -274,6 +276,7 @@
   transition: 0.5s;
 }
 .mem-body {
+  display: inline-block;
   flex: 1;
 }
 
@@ -303,9 +306,6 @@
 }
 /* readmore */
 
-.hide-text {
-  display: none;
-}
 
 
 button.readmore {
@@ -333,13 +333,13 @@ button.readmore::after {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   right: 28px;
-  top: 25px;
+  top: 32px;
   transition: .5s;
   -erbkit-transition: .5s;
 }
 
 button.readmore:hover::after {
-  top: 40px;
+  top: 55px;
 }
 
 .on-click {
