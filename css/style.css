@@ -1,6 +1,6 @@
 /* common setting */
   body {
-    background-color: #8b8b8b;
+    background-color: #000;
     color: #fff;
   }
   a {
@@ -269,11 +269,6 @@
   width: 120px;
   height: auto;
   margin-right: 20px;
-}
-.mem-img:hover{
-  width: 70px;
-  transform: translate(-5px,-5px);
-  transition: 0.5s;
 }
 .mem-body {
   display: inline-block;

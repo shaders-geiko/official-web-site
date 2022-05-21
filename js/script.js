@@ -14,7 +14,7 @@ $(function () {
     for (let key in data){
       console.log(key)
       title=data[key]['title'];
-      date=data[key]['date'].split('.')[0].replace('T',' / ');
+      date=data[key]['date'].split('.')[0].replace('T',' / ').slice(0,-3);
       img_path=data[key]['img-path'];
       text=data[key]['text'];
       console.log(img_path)
