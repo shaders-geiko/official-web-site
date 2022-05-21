@@ -9,8 +9,7 @@ function init() {
     height = window.innerHeight;
     renderer.setPixelRatio(1);
     renderer.setSize(width, height);
-    console.log(window.devicePixelRatio);
-    console.log(width+", "+height);
+
  
     // シーンを作成
     const scene = new THREE.Scene();
@@ -57,24 +56,19 @@ function init() {
     scene.add(light);
 
     // 初回実行
-    tick();
-
+    window.addEventListener('scroll', tick);
     function tick() {
-      requestAnimationFrame(tick);
-      model.rotation.y += 0.01;
+      model.rotation.y = window.scrollY*0.001;
       // レンダリング
       renderer.render(scene, camera);
     }
-    
 
-    // 初期化のために実行
-    onResize();
     // リサイズイベント発生時に実行
     window.addEventListener('resize', onResize);
     function onResize() {
         // サイズを取得
-        width = window.innerWidth;
-        height = window.innerHeight;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
 
         // レンダラーのサイズを調整する
         renderer.setPixelRatio(window.devicePixelRatio);
