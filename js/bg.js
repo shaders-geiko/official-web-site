@@ -64,19 +64,19 @@ function init() {
     }
 
     // リサイズイベント発生時に実行
-    window.addEventListener('resize', onResize);
-    function onResize() {
-        // サイズを取得
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+    // window.addEventListener('resize', onResize);
+    // function onResize() {
+    //     // サイズを取得
+    //     const width = window.innerWidth;
+    //     const height = window.innerHeight;
 
-        // レンダラーのサイズを調整する
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(width, height);
+    //     // レンダラーのサイズを調整する
+    //     renderer.setPixelRatio(window.devicePixelRatio);
+    //     renderer.setSize(width, height);
 
-        // カメラのアスペクト比を正す
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-        console.log(width);
-    }
+    //     // カメラのアスペクト比を正す
+    //     camera.aspect = width / height;
+    //     camera.updateProjectionMatrix();
+    //     console.log(width);
+    // }
 }
