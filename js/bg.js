@@ -7,8 +7,6 @@ function init() {
     // ウィンドウサイズ設定
     width = window.innerWidth;
     height = window.innerHeight;
-    renderer.setPixelRatio(1);
-    renderer.setSize(width, height);
 
  
     // シーンを作成
@@ -16,7 +14,7 @@ function init() {
  
     // カメラを作成
     camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
-    camera.position.set(0, 800,1000);
+    camera.position.set(0, 850,1000);
     // camera.lookAt(new THREE.Vector3(0, 700, 0));
 
     // Load GLTF or GLB
@@ -34,11 +32,11 @@ function init() {
             model = gltf.scene;
             model.name = "model_with_cloth";
             model.scale.set(200, 200, 200);
+            model.rotation.y = 300
             // model.position.set(1, -300,1);
             scene.add( gltf.scene );
 
             model["test"] = 100;
-            console.log("model");
         },
         function ( error ) {
             console.log( 'An error happened' );
@@ -56,25 +54,25 @@ function init() {
     // 初回実行
     window.addEventListener('scroll', tick);
     function tick() {
-      model.rotation.y = window.scrollY*0.005;
+      model.rotation.y =300+ window.scrollY*0.005;
       // レンダリング
       renderer.render(scene, camera);
     }
+    onResize();
+    window.addEventListener('resize', onResize);
+    function onResize() {
+        // サイズを取得
+        const width1 = window.innerWidth;
+        const height1 = window.innerHeight;
 
-    // リサイズイベント発生時に実行
-    // window.addEventListener('resize', onResize);
-    // function onResize() {
-    //     // サイズを取得
-    //     const width = window.innerWidth;
-    //     const height = window.innerHeight;
-
-    //     // レンダラーのサイズを調整する
-    //     renderer.setPixelRatio(window.devicePixelRatio);
-    //     renderer.setSize(width, height);
-
-    //     // カメラのアスペクト比を正す
-    //     camera.aspect = width / height;
-    //     camera.updateProjectionMatrix();
-    //     console.log(width);
-    // }
+        // レンダラーのサイズを調整する
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(width1, height1);
+        // カメラのアスペクト比を正す
+        camera.aspect = width1 / height1;
+        camera.updateProjectionMatrix();
+        camera.position.set(0, 850,2200-width1*1.1);
+        console.log(width1);
+        renderer.render(scene, camera);
+    }
 }
