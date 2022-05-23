@@ -16,9 +16,8 @@ function init() {
  
     // カメラを作成
     camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
-    camera.position.set(0, 0, 1000);
-    
-    //camera.lookAt(new THREE.Vector3(0, 400, 0));
+    camera.position.set(0, 800,1000);
+    // camera.lookAt(new THREE.Vector3(0, 700, 0));
 
     // Load GLTF or GLB
     var loader = new THREE.GLTFLoader();
@@ -26,7 +25,7 @@ function init() {
     dracoLoader.setDecoderPath('js/draco/gltf/');
     loader.setDRACOLoader(dracoLoader);
     
-    const url = 'models/gakumu.glb';
+    const url = 'models/funsuidraco1.glb';
     
     let model = null;
     loader.load(
@@ -34,8 +33,8 @@ function init() {
         function ( gltf ){
             model = gltf.scene;
             model.name = "model_with_cloth";
-            model.scale.set(4, 4, 4);
-            model.position.set(1, -300,1);
+            model.scale.set(200, 200, 200);
+            // model.position.set(1, -300,1);
             scene.add( gltf.scene );
 
             model["test"] = 100;
@@ -47,18 +46,17 @@ function init() {
         }
     );
     renderer.gammaOutput = true;
-
     // 平行光源
     const light = new THREE.DirectionalLight(0xFFFFFF);
-    light.intensity = 2; // 光の強さを倍に
-    light.position.set(1, 1, 1);
+    light.intensity = 0.5; // 光の強さを倍に
+    light.position.set(1, 1,1);
     // シーンに追加
     scene.add(light);
-
+    
     // 初回実行
     window.addEventListener('scroll', tick);
     function tick() {
-      model.rotation.y = window.scrollY*0.001;
+      model.rotation.y = window.scrollY*0.005;
       // レンダリング
       renderer.render(scene, camera);
     }
