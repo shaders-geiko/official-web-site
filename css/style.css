@@ -1,5 +1,10 @@
 /* common setting */
+html {
+  height: -webkit-fill-available;
+}
   body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     background-color: #000;
     color: #fff;
   }
