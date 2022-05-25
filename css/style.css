@@ -172,11 +172,6 @@ html {
   font-size: 16px;
   line-height: 1.8;
 }
-.random-design {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-}
 /* news */
 .news{
   width: 100%;
@@ -190,10 +185,14 @@ html {
 .card img{
   width: 300px;
 }
+.card-title{
+  font-size: 15px;
+}
 .card iframe{
   width: 300px;
 }
 .card-text{
+  font-size: 12px;
   height: 100px;
 }
 .card-date{
@@ -277,6 +276,7 @@ html {
   margin-right: 20px;
 }
 .mem-body {
+  text-align: left;
   max-width: 70%;
   display: inline-block;
   flex: 1;
