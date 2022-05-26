@@ -214,6 +214,85 @@ html {
   position: relative !important;
   left: 100%; 
 }
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  left: -2%;
+  width: 102%;
+
+}
+.modal__content{
+  background: rgba(255, 255, 255,1);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: 520px;
+}
+.modal-title{
+  margin-top: 0px;
+  width: 100%;
+  height: 80px;
+}
+.modal-title p{
+  color: #000;
+  padding-top: 30px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+}
+.modal-img{
+  display: inline-block;
+  border: solid 0.1px #777;
+  width: 400px;
+  margin-left: 50%;
+  transform: translate(-50%,0);
+}
+.modal-date{
+  text-align: center;
+  font-size: 80%;
+  color: #000;
+}
+.modal-text{
+  margin-top: 5px;
+  color: #000;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  border: 1px solid #000;
+  height: 125px;
+}
+.close-button{
+  position: absolute;
+  font-size: 80px;
+  transform: translate(0, -25%);
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  text-decoration: none;
+  color: black;
+}
+.detail-button{
+  margin-left: 75%;
+  margin-top: 5px;
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #000;
+}
+.detail-button p{
+  text-align: center;
+  line-height: 40px;
+}
 /* aboutus */
 .aboutus-img{
   border-radius: 5px;
@@ -317,7 +396,7 @@ button.readmore {
   margin: 40px auto;
   display: block;
   background-color: transparent;
-  color: #666;
+  color: #ccc;
   padding-bottom: 40px;
   border: none;
   outline: 0;
@@ -330,8 +409,8 @@ button.readmore::after {
   position: absolute;
   width: 30px;
   height: 30px;
-  border-top: solid 3px #666;
-  border-right: solid 3px #666;
+  border-top: solid 3px #ccc;
+  border-right: solid 3px #ccc;
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   right: 28px;

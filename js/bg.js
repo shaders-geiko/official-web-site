@@ -6,7 +6,7 @@ function init() {
     });
     // ウィンドウサイズ設定
     width = window.innerWidth;
-    height = window.innerHeight;
+    height = document.documentElement.clientHeight
 
  
     // シーンを作成
@@ -63,7 +63,7 @@ function init() {
     function onResize() {
         // サイズを取得
         const width1 = window.innerWidth;
-        const height1 = window.innerHeight;
+        const height1 = document.documentElement.clientHeight;
 
         // レンダラーのサイズを調整する
         renderer.setPixelRatio(window.devicePixelRatio);
