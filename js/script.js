@@ -46,6 +46,13 @@ $(function () {
     $('.modal-date').text(d[id]['date'].split('.')[0].split('T')[0])
     $('.modal-title').children('p').text(d[id]['title'])
     $('.modal-text').children('p').text(d[id]['main'])
+    if (d[id]['link-f']){
+      $('.detail-button').parents('a').attr('href',d[id]['link-path'])
+      $('.detail-button').show()
+    }else{
+      $('.detail-button').hide()
+    }
+    
     $('.js-modal').fadeIn()
 });
 $('.js-modal-close').on('click',function(){

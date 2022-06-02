@@ -62,7 +62,11 @@ html {
     padding-top: 20px;
     padding-bottom: 30px;
   }
-
+  .img-wrapper img{
+    width: 80%;
+    margin-left: 10%;
+    margin-block-end: 10%;
+  }
 
 
 /* header */
@@ -245,23 +249,25 @@ html {
   height: 80px;
 }
 .modal-title p{
+  margin-left: 30px;
   color: #000;
   padding-top: 30px;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
   font-size: 20px;
 }
 .modal-img{
   display: inline-block;
   border: solid 0.1px #777;
-  width: 400px;
+  width: 66%;
   margin-left: 50%;
   transform: translate(-50%,0);
 }
 .modal-date{
-  text-align: center;
+  text-align: left;
   font-size: 80%;
   color: #000;
+  margin-left: 30px;
 }
 .modal-text{
   margin-top: 5px;
@@ -271,17 +277,20 @@ html {
   width: 90%;
   border: 1px solid #000;
   height: 125px;
+  overflow-x: scroll;
 }
 .close-button{
   position: absolute;
+  top: -80px;
   font-size: 80px;
   transform: translate(0, -25%);
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .detail-button{
+  display: none;
   margin-left: 75%;
   margin-top: 5px;
   width: 120px;
@@ -503,7 +512,19 @@ button.readmore:hover::after {
     .gnav-item a:after {
       display: none;
     }
-  
+
+    /* modal */
+    .modal__content{
+      width: 350px;
+      height: 450px;
+    }
+    .modal-img{
+      width: 80%;
+    }
+    .detail-button{
+      margin-left: 60%;
+    }
+    /* member-intro */
     .mem-list {
       display: block;
       margin-bottom: 0;
