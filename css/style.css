@@ -259,24 +259,27 @@ html {
   font-weight: bold;
 }
 .modal-img{
-  position: relative;
+  position: absolute;
   display: inline-block;
   border: solid 0.1px #777;
   width: 50%;
   margin-left: 27%;
-  top: -45%;
+  top: 28%;
   transform: translate(-50%,0);
 }
 .modal-date{
+  position: absolute;
   text-align: left;
   font-size: 80%;
   color: #000;
   margin-left: 30px;
+  top: 17.5%;
+
 }
 .modal-text{
-  position: relative;
+  position: absolute;
   color: #000;
-  top: 10%;
+  top: 28%;
   margin-left: 53%;
   width: 45%;
   border: 1px solid #000;
@@ -294,17 +297,18 @@ html {
   color: white;
 }
 .detail-button{
-  font-size: larger;
+  position: absolute;
   display: none;
   margin-left: 85%;
-  margin-top: -20px;
+  top: 15%;
   width: 70px;
-  height: 35px;
-  border-radius: 17px;
-  background-color: rgb(96, 94, 94);
+  height: 32px;
+  border-radius: 10px;
+  background-color: rgb(53, 53, 53);
 }
 .detail-button p{
-  text-align: center;
+  padding:4%;
+  text-align:center;
 }
 /* aboutus */
 .aboutus-img{
